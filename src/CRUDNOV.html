@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Novedades</title>
+    <link rel="stylesheet" href="estilosnov.css">
+</head>
+<body>
+
+    <header>
+        <div id="logo">
+            <img id="logo-img" src="../src/img/SmartWallslogoweb.png" alt="Logo">
+            <h1> <center> CRUD de Novedades </center></h1>
+        </div>
+    </header>
+
+    <div id="contenedor">
+        <div class="text-container">
+            <h2>Agregar Nueva Novedad</h2>
+        </div>
+
+        <!-- Formulario para agregar novedades -->
+        <form action="../config/guardar_novedad.php" method="POST" enctype="multipart/form-data">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Título de la novedad" required>
+
+            <label for="contenido">Contenido</label>
+            <textarea id="contenido" name="contenido" placeholder="Contenido de la novedad" required></textarea>
+
+            <label for="imagen">Imagen</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*">
+
+            <button type="submit">Guardar Novedad</button>
+        </form>
+
+        <!-- Listado de novedades -->
+        <div class="novedades-list">
+            <h2>Últimas Novedades</h2>
+            <div class="novedad">
+                <h3>Título de Novedad 1</h3>
+                <img src="novedad1.jpg" alt="Imagen de novedad">
+                <p>Contenido breve de la novedad...</p>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="novedad">
+                <h3>Título de Novedad 2</h3>
+                <img src="../src/img/ImagenCasa2.jpg" alt="Imagen de novedad">
+                <p>Contenido breve de la novedad...</p>
+                <button class="editar">Editar</button>
+                <button class="eliminar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
